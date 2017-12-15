@@ -1,0 +1,36 @@
+ <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>View Contact</h2>
+      </div>
+ </md-toolbar>
+
+      <md-content layout-padding>
+          <div layout-gt-sm="row">
+              <div class="form-group">
+                    <label class="control-label block auto-height text-bolder_600">Name:</label>
+                    <span class="control-data block ng-binding">{{model.name}}</span>
+              </div>
+          </div>
+          <div layout-gt-sm="row">
+              <div class="form-group">
+                    <label class="control-label block auto-height text-bolder_600">Email:</label>
+                    <span class="control-data block ng-binding">{{model.email}}</span>
+              </div>
+          </div>
+          <div layout-gt-sm="row">
+              <div class="form-group">
+                    <label class="control-label block auto-height text-bolder_600">Phone:</label>
+                    <span class="control-data block ng-binding">{{model.phone}}</span>
+              </div>
+          </div>
+          <div layout-gt-sm="row">
+              <div class="form-group">
+                    <label class="control-label block auto-height text-bolder_600">Address:</label>
+                    <span class="control-data block ng-binding">{{model.address}}</span>
+              </div>
+          </div>
+      </md-content>
+
+      <md-button class='md-raised md-primary' ng-click="goback()">
+        BACK
+      </md-button>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To Do List</title>
+    {% load static %}   <!--registered the static tag-->
+
+    <!--style sheets-->
+    <link href="{% static 'angular-material/angular-material.min.css' %}" rel="stylesheet"/>
+    <link href="{% static 'angular-ui-grid/ui-grid.min.css' %}" rel="stylesheet"/>
+    <link href="{% static 'css/app.css' %}" rel="stylesheet"/>
+
+    <!--library scripts-->
+    <script src="{% static 'angular/angular.js' %}"></script>
+    <script src="{% static 'angular-aria/angular-aria.min.js' %}"></script>
+    <script src="{% static 'angular-animate/angular-animate.min.js' %}"></script>
+    <script src="{% static 'angular-material/angular-material.min.js' %}"></script>
+    <script src="{% static 'angular-ui-grid/ui-grid.min.js' %}"></script>
+    <script src="{% static 'angular-resource/angular-resource.min.js' %}"></script>
+    <script src="{% static 'angular-ui-router/release/angular-ui-router.min.js' %}"></script>
+
+    <!--custome scripts-->
+    <script src="{% static 'js/app.js' %}"></script>
+    <script src="{% static 'js/contact/contactCtrl.js' %}"></script>
+    <script src="{% static 'js/contact/contactResource.js' %}"></script>
+    <script src="{% static 'js/contact/router.js' %}"></script>
+    <script src="{% static 'js/app.ctrl.js' %}"></script>
+    <script src="{% static 'js/directives.js' %}"></script>
+    <script src="{% static 'js/filters.js' %}"></script>
+
+</head>
+<body ng-app="ContactManagement" ng-controller="AppCtrl">
+{% verbatim %}
+
+<md-toolbar md-scroll-shrink>
+    <div class="md-toolbar-tools">
+      <h3>
+        <span>TECHNICAL TASK 1</span>
+      </h3>
+    </div>
+</md-toolbar>
+
+<div class="container">
+    <div ui-view></div>
+</div>
+
+{% endverbatim %}
+</body>
+</html>

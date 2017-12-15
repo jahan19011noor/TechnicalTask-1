@@ -1,0 +1,21 @@
+<div ng-controller="contactListCtrl">
+
+<md-toolbar md-scroll-shrink>
+    <div class="md-toolbar-tools">
+      <h3>
+        <span>Contact List</span>
+      </h3>
+        <span flex></span>
+            <md-button class='md-raised md-primary' style="background-color: white; color: black" ng-click="add()">
+               Add Contact
+              </md-button>
+    </div>
+</md-toolbar>
+
+    <div ui-grid="gridOptions" ui-grid-cellNav class="grid"></div>
+
+    <div>
+        <h1>The name filter works here</h1>
+        <div>{{ arrayNames | arrangNamesInDescOrd }}</div>
+    </div>
+</div>

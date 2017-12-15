@@ -1,0 +1,51 @@
+ <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Edit Contact</h2>
+      </div>
+ </md-toolbar>
+
+      <md-content layout-padding>
+          <div layout="row" layout-xs="column">
+              <div flex>
+                  <md-input-container>
+                      <label>Name</label>
+                      <input required name="name" ng-model="model.name" md-autofocus>
+                      <div ng-if="error.name">
+                        <div class="md-input-messages-animation">{{error.name}}</div>
+                      </div>
+                  </md-input-container>
+                <md-input-container>
+                  <label>Email</label>
+                  <input required name="email" ng-model="model.email">
+                  <div ng-if="error.email">
+                    <div class="md-input-messages-animation">{{error.email}}</div>
+                  </div>
+                </md-input-container>
+              </div>
+          </div>
+          <div layout="row" layout-xs="column">
+              <div flex>
+                  <md-input-container>
+                      <label>Phone</label>
+                      <input required phone-num-directive name="phone" ng-model="model.phone">
+                      <div ng-if="error.phone">
+                        <div class="md-input-messages-animation">{{error.phone}}</div>
+                      </div>
+                    </md-input-container>
+                    <md-input-container>
+                      <label>Address</label>
+                      <input name="phone" ng-model="model.address">
+                      <div ng-if="error.address">
+                        <div class="md-input-messages-animation">{{error.address}}</div>
+                      </div>
+                    </md-input-container>
+              </div>
+          </div>
+      </md-content>
+
+      <md-button class='md-raised md-primary' ng-click="save()">
+       Save
+      </md-button>
+      <md-button class='md-raised md-primary' ng-click="cancel()">
+        Cancel
+      </md-button>
